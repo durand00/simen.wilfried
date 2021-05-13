@@ -8,7 +8,7 @@ if (!isset($_POST['usager']) || empty($_POST['usager']) || empty($_POST['mdp']))
 $usager = filter_input(INPUT_POST, "usager", FILTER_DEFAULT);
 $mdp    = filter_input(INPUT_POST, "mdp", FILTER_DEFAULT);
 
-include_once 'Authentification.php';
+include_once 'authentification.php';
 $auth = new Authentification();
 
 if ($auth->usagerValide($usager,$mdp)){
